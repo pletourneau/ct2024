@@ -1,0 +1,184 @@
+/*
+Theme Name:     Twenty Twenty-Four Child
+Theme URI:      https://example.com
+Description:    Child theme for Twenty Twenty-Four theme, custom for artist Megan E. Doherty
+Author:         Paul LeTourneau
+Author URI:     https://github.com/pletourneau
+Template:       twentytwentyfour
+Version:        1.0.0
+*/
+
+/* Import parent theme styles */
+@import url("../twentytwentyfour/style.css");
+
+/* Add  custom styles below */
+html,
+body {
+  height: 100%; /* Ensure full height for the viewport */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column; /* Stack header, main, and footer vertically */
+}
+
+div,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+}
+
+h2 {
+  font-size: 2rem;
+}
+.wp-block-navigation__responsive-container
+  :where(.wp-block-navigation-item a)
+  :hover {
+  color: black;
+}
+
+.wp-block-navigation__responsive-container
+  .wp-block-navigation-item.current-menu-item
+  a {
+  color: black;
+}
+
+.wp-block-site-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: gray;
+}
+
+.wp-block-post-title,
+.wp-block-spacer {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: 25vh !important;
+}
+
+main::before,
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: gray;
+}
+
+main::before {
+  left: 10%;
+}
+
+main::after {
+  right: 10%;
+}
+
+.wp-block-image {
+  padding-bottom: 8px;
+}
+
+.wp-social-link-twitter {
+  background-color: purple;
+}
+
+.wp-social-link-instagram {
+  background-color: purple;
+}
+
+.wp-block-columns.alignwide.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex {
+  justify-content: flex-end;
+  flex-basis: 90%;
+}
+
+.entry-content.wp-block-post-content.has-global-padding.is-layout-constrained.wp-block-post-content-is-layout-constrained {
+  padding: 0;
+}
+
+.wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+  padding: 0;
+}
+
+.wp-block-columns.alignwide.is-layout-flex.wp-container-core-columns-is-layout-2.wp-block-columns-is-layout-flex {
+  justify-content: flex-end;
+}
+
+.about {
+  color: white;
+}
+
+footer a {
+  color: gray;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .wp-block-media-text > .wp-block-media-text__content {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Target the main header */
+  header {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 25vw; /* Adjust width as desired */
+    height: 80vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  h1.has-text-align-center.wp-block-site-title {
+    font-size: 3rem !important;
+  }
+
+  /* Remove vertical lines on larger screens */
+  main::before,
+  main::after {
+    display: none;
+  }
+
+  /* Target the main content area */
+  main {
+    display: flex;
+    margin-left: 25%; /* Offset to match the sidebar width */
+    padding: 20px;
+  }
+
+  /* Constrain images within the lines for larger screens */
+  .wp-block-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    margin-left: 0; /* Reset any margin issues */
+    align-self: flex-start; /* Align footer to respect margins */
+    margin-left: 25%; /* Add the desired left margin */
+  }
+
+  .wp-block-site-title {
+    font-size: 2rem !important;
+  }
+
+  .wp-block-navigation__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+  }
+}
