@@ -26,8 +26,9 @@ h2 {
   color: gray;
 }
 
+
 h2 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 .wp-block-navigation__responsive-container
   :where(.wp-block-navigation-item a)
@@ -59,7 +60,7 @@ main {
   position: relative;
   padding-left: 15%;
   padding-right: 15%;
-  margin-bottom: 25vh !important;
+  
 }
 
 main::before,
@@ -84,11 +85,13 @@ main::after {
   padding-bottom: 8px;
 }
 
-.wp-social-link-twitter {
+
+  .wp-social-link-twitter {
   background-color: purple;
 }
 
-.wp-social-link-instagram {
+
+  .wp-social-link-instagram {
   background-color: purple;
 }
 
@@ -98,87 +101,111 @@ main::after {
 }
 
 .entry-content.wp-block-post-content.has-global-padding.is-layout-constrained.wp-block-post-content-is-layout-constrained {
-  padding: 0;
+    padding: 0;
 }
 
 .wp-block-group.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
-  padding: 0;
+    padding: 0;
 }
 
 .wp-block-columns.alignwide.is-layout-flex.wp-container-core-columns-is-layout-2.wp-block-columns-is-layout-flex {
-  justify-content: flex-end;
+    justify-content: flex-end; 
 }
 
 .about {
-  color: white;
+    color: white;
 }
 
 footer a {
-  color: gray;
-  text-decoration: none;
+    color: gray;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
   .wp-block-media-text > .wp-block-media-text__content {
-    padding: 0;
-  }
+    padding: 0; 
+    }
+    
+}
+
+
+@media (max-width: 1023px) {
+    
+    #header-foot {
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
-  /* Target the main header */
-  header {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    width: 25vw; /* Adjust width as desired */
-    height: 80vh;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
+    /* Target the main header */
+    header {
+        position: fixed;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        width: 25vw; /* Adjust width as desired */
+        /*height: 80vh;*/
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header a {
+        text-decoration: none;
+        color: gray;
+    }
+    
+    #header-foot {
+        text-decoration: none;
+        padding-top: 7rem;
+    }
+    
+    h1.has-text-align-center.wp-block-site-title {
+        font-size: 3rem !important;
+    }
 
-  h1.has-text-align-center.wp-block-site-title {
-    font-size: 3rem !important;
-  }
-
-  /* Remove vertical lines on larger screens */
+    /* Remove vertical lines on larger screens */
   main::before,
   main::after {
     display: none;
   }
+  
+    /* Target the main content area */
+    main {
+        /*do not use display flex... it will hide the modula galleries*/
+        margin-left: 25%; /* Offset to match the sidebar width */
+        padding: 20px;
+    }
+    
+      /* Constrain images within the lines for larger screens */
+    .wp-block-image img {
+        max-width: 100%; 
+    }
 
-  /* Target the main content area */
-  main {
-    display: flex;
-    margin-left: 25%; /* Offset to match the sidebar width */
-    padding: 20px;
-  }
-
-  /* Constrain images within the lines for larger screens */
-  .wp-block-image img {
-    max-width: 100%;
-  }
-
-  footer {
-    margin-left: 0; /* Reset any margin issues */
-    align-self: flex-start; /* Align footer to respect margins */
-    margin-left: 25%; /* Add the desired left margin */
-  }
-
-  .wp-block-site-title {
-    font-size: 2rem !important;
-  }
-
-  .wp-block-navigation__container {
+    
+    .wp-block-site-title {
+        font-size: 2rem !important;
+    }
+    
+    .wp-block-navigation__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height: 100%;
+    justify-content: center; 
+    text-align: left;
+    align-items: flex-start;
+    height: 100%; 
+  }
+  
+  h1 {
+    text-align: left !important;  
+  }
+  
+  #footy {
+      display: none;
+  }
+  #footie {
+      padding: 20px;
   }
 }
+
